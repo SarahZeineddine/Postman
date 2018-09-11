@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "72300acf-d3f5-4e50-8805-7c0cd63b9fbc",
+		"name": "Building_Commissioning_available_actions",
+		"description": "APIs for actions for building commissioning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve a list of buildings",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4a4269ab-fae4-4928-b983-7f54828f679c",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://bas-api-dev.1valet.com/v1/building-commissioning/buildings",
+					"protocol": "https",
+					"host": [
+						"bas-api-dev",
+						"1valet",
+						"com"
+					],
+					"path": [
+						"v1",
+						"building-commissioning",
+						"buildings"
+					]
+				},
+				"description": "To get the list of buildings"
+			},
+			"response": []
+		},
+		{
+			"name": " Retrieve a list of Security Cameras in a Building",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bdb98746-49e5-46ac-be8e-5fe7404d71ad",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/{{Building1}}/security-cameras",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{Building1}}",
+						"security-cameras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Retrieve a list of Suites in a building",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c66acfd2-4f18-401e-be5b-a97e091ae9b8",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://bas-api-dev.1valet.com/v1/building-commissioning/buildings/{{Building1}}/suites",
+					"protocol": "https",
+					"host": [
+						"bas-api-dev",
+						"1valet",
+						"com"
+					],
+					"path": [
+						"v1",
+						"building-commissioning",
+						"buildings",
+						"{{Building1}}",
+						"suites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve a list of Access Doors in a Building",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2ec47d8-1295-4288-a66a-127fe27c0bab",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/{{Building1}}/access-doors",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{Building1}}",
+						"access-doors"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessToken",
+				"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjU3QzRGMDYwQzlCRUFFQkY1MTIzQkFFMTE1RDU3OTI4NEU4MUMzMjgiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJWOFR3WU1tLXJyOVJJN3JoRmRWNUtFNkJ3eWcifQ.eyJuYmYiOjE1MzY1MjE4NzgsImV4cCI6MTUzNjUyNTQ3OCwiaXNzIjoiaHR0cHM6Ly9pZC1kZXYuMXZhbGV0LmNvbSIsImF1ZCI6WyJodHRwczovL2lkLWRldi4xdmFsZXQuY29tL3Jlc291cmNlcyIsImJhc0FwaSJdLCJjbGllbnRfaWQiOiJiYXNBcGlTd2FnZ2VyVUkiLCJzdWIiOiJkMzI3MGYyMS0yNWVkLTRiY2YtZTYyOS0wOGQ1ZDZkZWVkNzQiLCJhdXRoX3RpbWUiOjE1MzY1MjE4NzcsImlkcCI6ImxvY2FsIiwiaWQiOiJkMzI3MGYyMS0yNWVkLTRiY2YtZTYyOS0wOGQ1ZDZkZWVkNzQiLCJmdWxsTmFtZSI6Ik9uZVZhbGV0IFN1cGVyIEFkbWluIFN1cGVyIiwiZW1haWwiOiJhZG1pbkBvbmV2YWxldC5jb20iLCJmaXJzdE5hbWUiOiJPbmVWYWxldCBTdXBlciBBZG1pbiIsImxhc3ROYW1lIjoiU3VwZXIiLCJwcmVmZXJyZWRMYW5ndWFnZSI6IkVuZ2xpc2giLCJyb2xlcyI6Ik9uZVZhbGV0QWRtaW4iLCJzY29wZSI6WyJiYXNBcGkiXSwiYW1yIjpbInB3ZCJdfQ.tM6lWnTIcLqCroxsL-FrXzfdfUWLpKeyaToJFWyx8b7PYzZ_fZ52oKv2AXdci60KNgp8NmWAOULYKFEs_ZgJbHW6PWQRFYDdig6IA12KGYq17N6gfrS3TNa-xsVK13O8JBUne3O6viyb4g0Oaa10LODnyAxjV6Uw7LxdL1KBSmSXfITamAZsGnQ2OV_VPISovcNVa-WDmTqksJK2p4Qh0F0CEXcPfQUg0eh8lAYMyTpwAEDKeYdvYYD-fGxJB9ku8JdFd1fyTK06EaSukc7m7QhsMUDsj3rqGHkE7wzXLeBC4wh-oUzufYICfSqzINDOv8qCKewKTqzTzt_-obvl-mDeTrIlxA-433LCu16VA8jBRH4XhBMJdI_dnsS4F4VtsZavPp4JCNkbxZhoQa-NV6U7MDDZALcMPIGEvlRD2dEaIHWV4thDnLCBBYCbig6fYfLPEJ_JddaQ7KXiuSuu2pNrbF46Nf46BBesF75RQrr8LuAoG4fky58TZab51Z6DBqMEw39X0XDVNf9uYIlwnWbkv6I7p1fx0s4ERoRBOLVTRDAY9qo6RogKJ7Q3hcZuYhOoYP0HjFzbQTX92uNCILQ3TKF0Ywj9a2q_ry67VU6-gu-bDA-t_9rfhqtZ_TvnGKdjfdkx0IuZCZIeW-nNn-Lun9XBe-uPn8dp0JYud_A",
+				"type": "string"
+			},
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "53f28fa9-a3e3-4cd4-a1b9-61ac7586aff6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "98dcaff1-c4aa-4ac3-8baf-b58b77b58eb7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
